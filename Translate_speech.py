@@ -9,6 +9,7 @@ if your_text != ' ':
   translator = Translator()
   your_text_transl = translator.translate(your_text, dest= your_lang)
   your_text_tospeech = your_text_transl.text
+  st.write('Your translated text is: ', your_text_tospeech)
 
   tts1=gTTS(text = your_text_tospeech, lang = your_lang)
   tts1.save('your_file.mp3')
