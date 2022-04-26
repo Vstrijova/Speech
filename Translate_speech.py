@@ -5,7 +5,7 @@ from googletrans import Translator
 your_text = st.text_input('Give me a text to translate ')
 your_lang = st.text_input('Give me the 2-letter language code you want to translate into ')
 
-if you_text != ' ':
+if your_text != ' ':
   translator = Translator()
   your_text_transl = translator.translate(your_text, dest= your_lang)
   your_text_tospeech = your_text_transl.text
@@ -15,3 +15,5 @@ if you_text != ' ':
   audio_file = open('your_file.mp3', 'rb')
   st.audio(data=audio_file, format="audio/mp3", start_time = 0)
   st.download_button(label='Download audio file', data=audio_file, file_name= 'your_file.mp3', mine='audio/mp3')
+ else:
+  pass
