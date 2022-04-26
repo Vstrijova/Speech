@@ -15,5 +15,5 @@ if your_text != ' ':
   audio_file = open('your_file.mp3', 'rb')
   st.audio(data=audio_file, format="audio/mp3", start_time = 0)
   st.download_button(label='Download audio file', data=audio_file, file_name= 'your_file.mp3', mine='audio/mp3')
- else:
+else:
   pass
