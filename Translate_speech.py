@@ -3,7 +3,7 @@ from gtts import gTTS
 from googletrans import Translator
 
 your_text = st.text_input('Give me a text to translate ', 'Hey you')
-your_lang = st.text_input('Give me the 2-letter language code you want to translate into ', en)
+your_lang = st.text_input('Give me the 2-letter language code you want to translate into ', 'en')
 
 if your_text != ' ':
   translator = Translator()
