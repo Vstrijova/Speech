@@ -1,9 +1,9 @@
+import streamlit as st
 from gtts import gTTS
 from googletrans import Translator
-import streamlit as st
 
-your_text = st.text_input('Give me a text to translate ')
-your_lang = st.text_input('Give me the 2-letter language code you want to translate into ')
+your_text = st.input('Give me a text to translate ')
+your_lang = st.input('Give me the 2-letter language code you want to translate into ')
 
 translator = Translator()
 your_text_transl = translator.translate(your_text, dest= your_lang)
