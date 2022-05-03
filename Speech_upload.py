@@ -10,6 +10,8 @@ if your_uploaded_file is not None:
      st.write(bytes_data)
      stringio = StringIO(your_uploaded_file.getvalue().decode("utf-8"))
      st.write(stringio)
+     dataframe = pd.read_csv(uploaded_file)
+     st.write(dataframe)
 
      if your_uploaded_file != ' ':
           translator = Translator()
