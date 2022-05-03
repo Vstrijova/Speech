@@ -4,14 +4,14 @@ from googletrans import Translator
 
 st.header("Welcome to my translation_app")
 
-your_text =  st.file_uploader("Choose a file")
-if uploaded_file is not None:
-     bytes_data = uploaded_file.getvalue()
+your_uploaded_file =  st.file_uploader("Choose a file")
+if your_uploaded_file is not None:
+     bytes_data = you_uploaded_file.getvalue()
      st.write(bytes_data)
-     stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
+     stringio = StringIO(your_uploaded_file.getvalue().decode("utf-8"))
      st.write(stringio)
 
-if your_text != ' ':
+if your_uploaded_file != ' ':
   translator = Translator()
   your_text_transl = translator.translate(your_text, dest= your_lang)
   your_text_tospeech = your_text_transl.text
